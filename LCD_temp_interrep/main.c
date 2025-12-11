@@ -22,8 +22,6 @@ char result_s[10];
 int gain=0;
 volatile int ADC_flag=0;
 
-
-//--------------
 //타이머 인터럽트 플레그
 volatile uint8_t timer1_flag = 0;
 
@@ -254,4 +252,4 @@ ISR(ADC_vect)
 ISR(TIMER1_COMPA_vect)
 {
 	timer1_flag =1;	
-} //프리러닝 모드에서 인터럽트를 계속 요청하고 있고 이때문에 타이머 카운트의 인터럽트가 동작하지 않는다. 
+}  
